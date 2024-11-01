@@ -48,7 +48,7 @@ nav {
 }
 .burger::before,
 .burger::after {
-    content: '';
+    content: "";
     display: block;
     margin-top: 0.5em;
     background: var(--color2);
@@ -326,9 +326,6 @@ footer hr {
 }
 
 @media (max-width:880px) {
-    .easy-polish-logo  {
-        z-index: 1;
-    }
     .burger {
         display: block;
         z-index: 1;
@@ -336,7 +333,7 @@ footer hr {
 
     .nav-list {
         padding: 4em;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         background: var(--color1);
@@ -395,12 +392,76 @@ footer hr {
 
     /*Estilo Ativo*/
 
-    .nav-list.is-active {
+    .nav.is-active  .nav-list{
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
+    }
+
+    .nav.is-active .burger {
+        position: fixed;
+        top: 39px;
+        right: 87px;
+        border-top: transparent;
+        transition: ease-in-out 1s;
+    }
+
+    .nav.is-active .burger::before {
+        transform: rotate(-135deg);
+        transition: ease-in-out 1s;
+    }
+    .nav.is-active .burger::after {
+        transform: rotate(135deg);
+        top: -8px;
+        transition: ease-in-out 1s;
     }
 
     /*Fim Estilo Ativo*/
 }
 
+@media (max-width:690px) {
+
+    .second-section-iframe iframe {
+        width: 450px;
+        height: 240px;
+    }
+    .second-section p {
+        max-width: 480px;
+    }
+    .third-section-first-video iframe, .third-section-second-video iframe {
+        width: 450px;
+        height: 250px;
+    }
+    .third-section-first-video h1, .third-section-second-video h1 {
+       font-size: 20pt;
+    }
+    .third-section-first-video p, .third-section-second-video p {
+       max-width: 450px;
+    }
+}
+
+@media (max-width:580px) {
+    .first-section h1 {
+        text-align: center;
+        font-size: 23pt;
+        margin-top: 3em;
+    }
+    .second-section-iframe iframe {
+        width: 350px;
+        height: 200px;
+    }
+
+    .second-section p {
+        width: 370px;
+    }
+    .first-section {
+        background-position: 70%;
+    }
+
+    .third-section-first-video iframe, .third-section-second-video iframe {
+        width: 350px;
+        height: 200px;
+    }
+}
+
 /*Fim Media Queries*/
+
