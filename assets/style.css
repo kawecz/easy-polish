@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color1:#FFFFFF;
+    --color2:#0C0C0C;
+    --color3:#EE6F43;
+    --color4:#20292E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    transition: all 1s;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Inicio nav*/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3em;
+    position: fixed;
+    background: var(--color1);
+    width: 100vw;
+    height: 70px;
+}
+
+.easy-polish-logo img {
+    width: 100px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    font-size: 12pt;
+    font-weight: 500;
+}
+.nav-list a {
+    color: var(--color2);
+}
+.nav-list a:hover {
+    opacity: 0.7;
+}
+
+.socials-logo {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding: 1em;
+}
+
+.socialy img,.socialf img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.sociali img {
+    width: 25px;
+    cursor: pointer;
+}
+.socialy img:hover,.socialf img:hover {
+   opacity: 0.7;
+}
+
+.sociali img:hover {
+    opacity: 0.7;
+}
+
+.nav_button {
+    padding: 1.5em;
+    border: none;
+    border-radius: 3em;
+    font-weight: 500;
+    background: var(--color3);
+    cursor: pointer;
+}
+.nav_button:hover {
+   opacity: 0.7;
+}
+.nav_button a {
+    color: var(--color1);
+}
+
+
+/*Fim nav*/
+/*Inicio first section*/
+
+.first-section {
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    background-image: url(../assets/imgs/main_photo.jpg);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+.first-section h1 {
+    font-size: 40pt;
+    width: 450px;
+    margin-top: 2em;
+    color: white;
+}
+
+/*Fim first section*/
+
+/*Inicio second section*/
+/*Fim second section*/
