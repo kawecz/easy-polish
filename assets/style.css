@@ -39,6 +39,24 @@ nav {
     width: 100px;
 }
 
+.burger {
+    border: none;
+    background: none;
+    border-top: 2px solid black;
+    cursor: pointer;
+    display: none;
+}
+.burger::before,
+.burger::after {
+    content: '';
+    display: block;
+    margin-top: 0.5em;
+    background: var(--color2);
+    width: 30px;
+    height: 2px;
+    position: relative;
+}
+
 .nav-list {
     display: flex;
     flex-direction: row;
@@ -47,8 +65,9 @@ nav {
     font-size: 12pt;
     font-weight: 500;
 }
-.nav-list a {
+.nav-list li a {
     color: var(--color2);
+    cursor: pointer;
 }
 .nav-list a:hover {
     opacity: 0.7;
@@ -59,6 +78,9 @@ nav {
     gap: 1em;
     align-items: center;
     padding: 1em;
+}
+#socials-logo {
+    display: none;
 }
 
 .socialy img,.socialf img {
@@ -86,6 +108,9 @@ nav {
     background: var(--color3);
     cursor: pointer;
 }
+#nav_button {
+    display: none;
+}
 .nav_button:hover {
    opacity: 0.7;
 }
@@ -99,7 +124,7 @@ nav {
 
 .first-section {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url(../assets/imgs/main_photo.jpg);
     background-position: center;
@@ -271,6 +296,111 @@ footer hr {
 
 /*Inicio Medias Queries*/
 
+@media (max-width:1050px) {
+    .third-section-first-video iframe, .third-section-second-video iframe {
+        width: 450px;
+        height: 250px;
+    }
+    .third-section-first-video h1, .third-section-second-video h1 {
+        font-size: 25pt;
+    }
+   
+}
 
+@media (max-width:950px) {
+    .third-section {
+        flex-direction: column;
+    }
+
+    .third-section-first-video iframe, .third-section-second-video iframe {
+        width: 650px;
+        height: 450px;
+    }
+
+    .third-section-first-video h1, .third-section-second-video h1 {
+        font-size: 35pt;
+    }
+    .third-section-first-video p, .third-section-second-video p {
+        max-width: 650px;
+    }
+}
+
+@media (max-width:880px) {
+    .easy-polish-logo  {
+        z-index: 1;
+    }
+    .burger {
+        display: block;
+        z-index: 1;
+    }
+
+    .nav-list {
+        padding: 4em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--color1);
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-evenly;
+        gap: 0;
+        font-size: 15pt;
+
+        clip-path: circle(100px at -90% -15%);
+        pointer-events: none;
+        
+    }
+
+    .socials-logo {
+        display: none;
+    }
+
+    #socials-logo {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        padding: 1em;
+        cursor: pointer;
+    }
+
+    .nav_button {
+        display: none;
+    }
+
+    #nav_button {
+        display: block;
+        padding: 1.5em;
+        border: none;
+        border-radius: 3em;
+        font-weight: 500;
+        background: var(--color7);
+        cursor: pointer;
+    }
+    #nav_button:hover {
+       opacity: 0.7;
+    }
+    #nav_button a {
+        color: var(--color1);
+    }
+    .second-section iframe {
+        width: 650px;
+
+    }
+
+    .second-section p {
+        max-width: 685px;
+    }
+
+    /*Estilo Ativo*/
+
+    .nav-list.is-active {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    /*Fim Estilo Ativo*/
+}
 
 /*Fim Media Queries*/
